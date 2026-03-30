@@ -68,4 +68,4 @@ tar -czf $dest/backup_$(date +%F).tar.gz $src
 echo "Backup done!"
 ```
 
-![image](vnpt/Bao/bash shell/image/filebackup.png)
+![image](../image/filebackup.png)
