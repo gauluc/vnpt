@@ -54,3 +54,18 @@ echo "Hello $1"
 }
 hello Bao
 ```
+
+**backup đơn giản**
+
+```bash
+#!/bin/bash
+
+src="/home"
+dest="/home/le/backup"
+mkdir -p "$dest"
+tar -czf $dest/backup_$(date +%F).tar.gz $src
+
+echo "Backup done!"
+```
+
+![image](vnpt/Bao/bash shell/image/filebackup.png)
