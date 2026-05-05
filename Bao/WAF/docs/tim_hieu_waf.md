@@ -5,6 +5,7 @@
 **WAF** hoạt động bằng cách kiểm tra và lọc lưu lượng truy cập, ngăn chặn các yêu cầu độc hại trước khi chúng tiếp cận ứng dụng web
 Khác với tường lửa mạng truyền thống, WAF hoạt động ở tầng ứng dụng (Layer 7) của mô hình OSI, cho phép WAF phân tích nội dung của lưu lượng HTTP/HTTPS và hiểu được các yêu cầu web phức tạp
 
+![image](../image/waf.png)
 **Tại sao cần sử dụng WAF**
 
 - bối cảnh tấn công ứng dụng wed gia tăng
@@ -43,6 +44,8 @@ WAF phân tích toàn bộ lưu lượng HTTP/HTTPS, kiểm tra chi tiết mọi
 1. Positive (Allowlist): Chỉ cho phép lưu lượng truy cập được định nghĩa rõ ràng là hợp lệ đi qua, chặn tất cả các yêu cầu khác
 
 2. Negative (Blocklist): Cho phép tất cả lưu lượng truy cập đi qua, trừ khi WAF xác định là độc hại dựa trên danh sách các dấu hiệu tấn công đã biết
+
+_Blocklist hoạt động theo nguyên tắc “chặn cái xấu”, trong khi Allowlist hoạt động theo nguyên tắc “chỉ cho phép cái tốt”. Blocklist phù hợp khi bạn muốn chặn một số nguồn độc hại cụ thể, trong khi Allowlist phù hợp khi bạn muốn kiểm soát chặt chẽ truy cập, chỉ cho phép một số nguồn tin cậy được xác định trước_
 
 **mô hình triển khai**
 
@@ -83,3 +86,19 @@ WAF là công cụ đắc lực trong việc bảo vệ ứng dụng web khỏi 
 - File Inclusion và Information Disclosure: Ngăn chặn các hình thức tấn công như đưa file độc hại vào máy chủ hoặc tiết lộ thông tin nhạy cảm. WAF bảo vệ ứng dụng web khỏi nhiều hình thức tấn công khác, đảm bảo an toàn và ổn định cho hoạt động
 
 ![image](../image/hinh-thuc-tan-cong-waf.png)
+
+# 6. Những lợi ích quan trọng của WAF
+
+- Phát hiện và ngăn chặn tấn công web hiệu quả: Bảo vệ ứng dụng web khỏi các cuộc tấn công phổ biến như SQL injection, cross-site scripting, request forgery và nhiều hình thức tấn công khác, giảm thiểu rủi ro mất dữ liệu và gián đoạn dịch vụ
+
+- Giảm thiểu rủi ro an ninh mạng: Bằng cách ngăn chặn các cuộc tấn công, WAF giảm thiểu nguy cơ hệ thống bị xâm nhập, bảo vệ dữ liệu quan trọng và thông tin cá nhân của người dùng và doanh nghiệp, bao gồm cả thông tin tài chính
+
+- Đảm bảo tuân thủ các tiêu chuẩn bảo mật: Hỗ trợ doanh nghiệp tuân thủ các quy định và tiêu chuẩn bảo mật quan trọng như GDPR, PCI DSS, đặc biệt là trong các ngành có yêu cầu nghiêm ngặt như ngân hàng, y tế, và tài chính
+
+- Nâng cao hiệu suất và khả năng đáp ứng của ứng dụng web: WAF giúp lọc bỏ lưu lượng độc hại và spam, giảm tải cho máy chủ web, từ đó cải thiện hiệu suất và khả năng đáp ứng của ứng dụng
+
+- Bảo vệ dữ liệu quan trọng và thông tin cá nhân: WAF ngăn chặn các cuộc tấn công có thể dẫn đến việc đánh cắp hoặc rò rỉ thông tin nhạy cảm, bảo vệ dữ liệu người dùng, giao dịch tài chính và thông tin kinh doanh quan trọng
+
+- Tăng cường uy tín và niềm tin của khách hàng: Một website an toàn giúp tạo dựng niềm tin và uy tín với khách hàng, khuyến khích họ sử dụng dịch vụ trực tuyến và tăng cường lòng trung thành
+
+- Giảm rủi ro và chi phí phát sinh do tấn công: Giúp giảm thiểu thiệt hại tài chính và chi phí vận hành phát sinh do các cuộc tấn công mạng và mất mát dữ liệu
