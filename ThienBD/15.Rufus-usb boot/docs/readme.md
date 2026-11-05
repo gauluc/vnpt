@@ -1,5 +1,0 @@
-[# 1.Tạo USB Boot bằng phần mềm Rufus](https://github.com/ducthien1998/Thuc-tap-2023/blob/main/ThienBD/15.Rufus-usb%20boot/docs/tailieu.md#1t%E1%BA%A1o-usb-boot-b%E1%BA%B1ng-ph%E1%BA%A7n-m%E1%BB%81m-rufus)
-[# 2.Đặc điểm của MBR và GPT](https://github.com/ducthien1998/Thuc-tap-2023/blob/main/ThienBD/15.Rufus-usb%20boot/docs/tailieu.md#2%C4%91%E1%BA%B7c-%C4%91i%E1%BB%83m-c%E1%BB%A7a-mbr-v%C3%A0-gpt)
-[## 2.1. Định nghĩa ](https://github.com/ducthien1998/Thuc-tap-2023/blob/main/ThienBD/15.Rufus-usb%20boot/docs/tailieu.md#21-%C4%91%E1%BB%8Bnh-ngh%C4%A9a)
-[## 2.2. Đặc điểm ](https://github.com/ducthien1998/Thuc-tap-2023/blob/main/ThienBD/15.Rufus-usb%20boot/docs/tailieu.md#22-%C4%91%E1%BA%B7c-%C4%91i%E1%BB%83m)
-[# 3.So sánh giữa MBR và GPT](https://github.com/ducthien1998/Thuc-tap-2023/blob/main/ThienBD/15.Rufus-usb%20boot/docs/tailieu.md#3so-s%C3%A1nh-gi%E1%BB%AFa-mbr-v%C3%A0-gpt)
