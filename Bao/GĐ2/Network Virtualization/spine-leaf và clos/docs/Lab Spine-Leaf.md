@@ -7,7 +7,7 @@ Mục tiêu là nắm vững
 - ECMP được hình thành và hoạt động như thế nào
 - Khi một Spine hoặc một uplink bị lỗi, traffic sẽ đi theo đường nào
 
-# 1. Dựng Spine-Leaf Topology
+### Dựng Spine-Leaf Topology
 
 Sử dụng 4 router:
 - Spine 1
