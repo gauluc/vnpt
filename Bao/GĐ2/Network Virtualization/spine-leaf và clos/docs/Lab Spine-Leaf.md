@@ -252,6 +252,15 @@ for node in spine1 spine2 leaf1 leaf2; do
 done
 ```
 
+### Kiểm tra kết nối Leaf1 đến hai Spine
+
+`docker exec clab-sl-ebgp-leaf1 ping -c 3 10.0.1.1`
+
+`docker exec clab-sl-ebgp-leaf1 ping -c 3 10.0.1.3`
+
+![image](../image/4.png)
+
+
 ### Kiểm tra BGP Neighbor
 
 ```
@@ -261,15 +270,6 @@ for node in spine1 spine2 leaf1 leaf2; do
         vtysh -c "show bgp ipv4 unicast summary"
 done
 ```
-
-![image](../image/4.png)
-
-
-### Kiểm tra kết nối Leaf1 đến hai Spine
-
-`docker exec clab-sl-ebgp-leaf1 ping -c 3 10.0.1.1`
-
-`docker exec clab-sl-ebgp-leaf1 ping -c 3 10.0.1.3`
 
 ![image](../image/5.png)
 
