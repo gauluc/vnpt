@@ -273,6 +273,24 @@ done
 
 ![image](../image/5.png)
 
+### Kiểm tra BGP có học hai đường đi không
+
+```
+docker exec clab-sl-ebgp-leaf1 \
+vtysh -c "show bgp ipv4 unicast 10.255.0.12/32"
+```
+
+![image](../image/6.png)
+
+### Kiểm tra kết nối giữa hai Leaf
+
+```
+docker exec clab-sl-ebgp-leaf1 \
+ping -I 10.255.0.11 -c 10 10.255.0.12
+```
+
+![image](../image/7.png)
+
 ### Kiểm tra ECMP:
 
 ```
@@ -280,4 +298,23 @@ docker exec clab-sl-ebgp-leaf1 \
     ip route show 10.255.0.12/32
 ```
 
-![image](../image/6.png)
+![image](../image/8.png)
+
+### Kiểm tra ECMP khi một Spine bị lỗi
+
+```
+docker exec clab-sl-ebgp-spine1 \
+ip link set eth1 down
+```
+
+```
+docker exec clab-sl-ebgp-leaf1 \
+vtysh -c "show bgp ipv4 unicast summary"
+```
+
+```
+docker exec clab-sl-ebgp-leaf1 \
+ip route show 10.255.0.12/32
+```
+
+![image](../image/9.png)
